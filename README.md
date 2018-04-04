@@ -20,22 +20,23 @@ Then add `ngSanitize` as a dependency for your app:
 angular.module('myApp', [require('angular-sanitize')]);
 ```
 
-### bower
-
-```shell
-bower install angular-sanitize
-```
-
 Add a `<script>` to your `index.html`:
 
 ```html
-<script src="/node_modules/angular-sanitize-custom/angular-sanitize-custom.js"></script>
+<script src="/node_modules/angular-sanitize-custom/angular-sanitize-custom.min.js"></script>
 ```
 
 Then add `ngSanitize` as a dependency for your app:
 
 ```javascript
 angular.module('myApp', ['ngSanitize']);
+```
+
+Add more elements to the whitelist
+```javascript
+angular.module('myApp').config($sanitizeProvider => {
+  $sanitizeProvider.addValidElements(['newElement1', 'newElement2']);
+});
 ```
 
 ## Documentation
