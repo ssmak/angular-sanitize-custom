@@ -168,7 +168,6 @@ function $SanitizeProvider() {
   this.addValidElements = function (elements) {
     if(elements && elements.length > 0) {
       validElements = extend({}, validElements, toMap(elements.join(',')));
-      console.log(validElements);
     }
   }
 
