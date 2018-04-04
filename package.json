@@ -1,0 +1,32 @@
+{
+  "name": "angular-sanitize-custom",
+  "version": "1.0.0",
+  "description": "Based on the original AngularJS module for sanitizing HTML with adding supported for custom elements to the whitelist.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssmak/angular-sanitize-custom.git"
+  },
+  "keywords": [
+    "AngularJS",
+    "sanitizing",
+    "ngSanitize",
+    "customize",
+    "white",
+    "list",
+    "whitelist",
+    "new",
+    "element",
+    "new",
+    "tag"
+  ],
+  "author": "ssmak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ssmak/angular-sanitize-custom/issues"
+  },
+  "homepage": "https://github.com/ssmak/angular-sanitize-custom#readme"
+}
