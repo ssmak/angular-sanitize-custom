@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>angular-sanitize-custom (demo)</title>
+    <link rel="stylesheet" href="master.css">
+  </head>
+  <body>
+    <div ng-controller="my-ctrl">
+      <h1>angular-sanitize-custom</h1>
+      <div>
+        (repository: <a href="https://github.com/ssmak/angular-sanitize-custom" target="_blank">https://github.com/ssmak/angular-sanitize-custom</a>)
+      </div>
+      <div class="desc">
+        This is a demo page for the hacked angular-sanitize(v1.6.9) module which is a replacement for the old version of original angular-sanitize (&lt;1.6.10) that miss the addValidElements method.
+      </div>
+      <hr />
+      <div class="tags">
+        <div>
+          <div ng-bind-html="tag1"></div>
+          <div ng-bind-html="tag2"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular.min.js"></script>
+    <!-- **You can test with one of the below versions of angular-sanitize -->
+    <!--
+      angular-sanitize (<=1.6.9) miss the `addValidElements` method, so it DOES NOT WORK.
+    -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular-sanitize.js"></script> -->
+    <!--
+      HACKED angular-sanitize (1.6.9) and the `addValidElements` method is added back, so it WORKS.
+    -->
+    <script src="../angular-sanitize-custom.min.js">></script>
+    <!--
+      angular-sanitize (>=1.6.10) includes the `addValidElements` method, so it WORKS.
+    -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.10/angular-sanitize.js"></script> -->
+    <script src="app.js"></script>
+  </body>
+</html>
