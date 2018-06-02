@@ -1,4 +1,5 @@
 <h1 align="center">angular-sanitize-custom</h1>
+<h4 align="center">(Based on angular-sanitize v1.6.9)</h4>
 
 <h5 align="center">Add method `addValidElements` back to the old version(&lt;1.6.10) of angular-sanitize.</h5>
 
@@ -18,6 +19,9 @@ Follow the requirements of my project, I can't upgrade any libraries and so I ne
     <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" alt="PayPal" />
   </a>
 </div>
+
+## Demonstration on CodePen
+https://codepen.io/ssmak/pen/XYmEMO
 
 ## Installation + Use
 1. Install to your project as dependency from NPM (https://www.npmjs.com/package/angular-sanitize-custom)
@@ -40,7 +44,7 @@ angular.module('myApp').config($sanitizeProvider => {
 ```
 
 ## Test
-A demo page is located in the /test folder. You can test with each version of angular-sanitize with the live reload by using lite-server which can be install by
+A demo page is located in the /test folder. You can test with each version of angular-sanitize with the live reload by using lite-server which can be installed by
 ``` bash
 npm install lite-server -g
 cd /project_root && lite-server
