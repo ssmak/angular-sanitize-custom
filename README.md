@@ -3,6 +3,12 @@
 
 <h5 align="center">Add method `addValidElements` back to the old version(&lt;1.6.10) of angular-sanitize.</h5>
 
+<div align="center">
+  <a href="https://nodei.co/npm/angular-sanitize-custom/">
+    <img src="https://nodei.co/npm/angular-sanitize-custom.png?compact=true">
+  </a>
+</div>
+
 ``` bash
 npm install angular-sanitize-custom --save
 ```
