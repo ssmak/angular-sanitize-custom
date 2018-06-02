@@ -2,13 +2,13 @@
 <h4 align="center">(Based on angular-sanitize v1.6.9)</h4>
 
 <h5 align="center">Add method `addValidElements` back to the old version(&lt;1.6.10) of angular-sanitize.</h5>
-
+<br />
 <div align="center">
   <a href="https://nodei.co/npm/angular-sanitize-custom/">
     <img src="https://nodei.co/npm/angular-sanitize-custom.png?compact=true">
   </a>
 </div>
-
+<br />
 ## History
 I worked on a project that uses Angular version 1.6.9. In order to use `ng-bind-html` with custom tag without any errors, we must add all custom tags to the trust list. This method ONLY exists in angular-sanitize v1.6.10 or above, but NOT in v1.6.9 or below. 
 Follow the requirements of my project, I can't upgrade any libraries and so I need to hack the original version and make it works on the customize tag.
