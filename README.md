@@ -1,69 +1,50 @@
-# packaged angular-sanitize-custom
+<h1 align="center">angular-sanitize-custom</h1>
 
-This repo is for distribution on `npm`. The source for this module is in the
-[main AngularJS repo](https://github.com/ssmak/angular-sanitize-custom.git).
-Please file issues and pull requests against that repo.
+<h5 align="center">Add method `addValidElements` back to the old version(&lt;1.6.10) of angular-sanitize.</h5>
 
-## Install
-
-You can install this package with `npm`.
-
-### npm
-
-```shell
-npm install angular-sanitize-custom
+``` bash
+npm install angular-sanitize-custom --save
 ```
+## History
+I worked on a project that uses Angular version 1.6.9. In order to use `ng-bind-html` with custom tag without any errors, we must add all custom tags to the trust list. This method ONLY exists in angular-sanitize v1.6.10 or above, but NOT in v1.6.9 or below. 
+Follow the requirements of my project, I can't upgrade any libraries and so I need to hack the original version and make it works on the customize tag.
 
-Then add `ngSanitize` as a dependency for your app:
+<div align="center">
+  <a href="https://paypal.me/ssmak">
+    <img src="https://img.shields.io/badge/Donate-PayPal-green.svg" alt="PayPal Donation" />
+  </a>
+  <br />
+  <a href="https://paypal.me/ssmak">
+    <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" alt="PayPal" />
+  </a>
+</div>
 
-```javascript
-angular.module('myApp', [require('angular-sanitize')]);
+## Installation + Use
+1. Install to your project as dependency from NPM (https://www.npmjs.com/package/angular-sanitize-custom)
+``` bash
+npm install angular-sanitize-custom --save
 ```
-
-Add a `<script>` to your `index.html`:
-
-```html
+2. Load the dependency
+``` html
 <script src="/node_modules/angular-sanitize-custom/angular-sanitize-custom.min.js"></script>
 ```
-
-Then add `ngSanitize` as a dependency for your app:
-
-```javascript
+3. Define the dependency to your Angular module
+``` html
 angular.module('myApp', ['ngSanitize']);
 ```
-
-Add more elements to the whitelist
-```javascript
+4. Configure the provider and add any custom tags to the trust list
+``` html
 angular.module('myApp').config($sanitizeProvider => {
   $sanitizeProvider.addValidElements(['newElement1', 'newElement2']);
 });
 ```
 
-## Documentation
-
-Documentation is available on the
-[AngularJS docs site](http://docs.angularjs.org/api/ngSanitize).
+## Test
+A demo page is located in the /test folder. You can test with each version of angular-sanitize with the live reload by using lite-server which can be install by
+``` bash
+npm install lite-server -g
+cd /project_root && lite-server
+```
 
 ## License
-
-The MIT License
-
-Copyright (c) 2010-2015 Google, Inc. http://angularjs.org
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+MIT
