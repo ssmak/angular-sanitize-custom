@@ -1,7 +1,7 @@
 {
   "name": "angular-sanitize-custom",
   "version": "1.3.0",
-  "description": "Based on the original AngularJS module for sanitizing HTML with adding supported for custom elements to the whitelist.",
+  "description": "Add method `addValidElements` back to the old version(<1.6.10) of angular-sanitize.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
